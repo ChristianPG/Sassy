@@ -1,0 +1,24 @@
+$colors: (
+  primaryButton: #228991,
+  text: #228991,
+  // primary: #228991,
+  primary: #005DFF,
+  primary-light: lighten(#005DFF, 40%),
+  primary-dark: darken(#005DFF, 40%),
+  accent: #fff6bb,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+}
+
+$padding: 15px;
+$borders: 15px;
+
+$desktopWidth: 840px;
+
+@mixin desktop {
+  @media (min-width: #{$desktopWidth}) {
+    @content;
+  }
+}
